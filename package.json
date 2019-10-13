@@ -1,0 +1,19 @@
+{
+    "name": "foo",
+    "version": "0.0.0",
+    "main": "bin/index.js",
+    "types": "bin/index.d.js",
+    "files": [
+        "bin"
+    ],
+    "license": "AGPL-3.0",
+    "scripts": {
+        "start": "node bin/index.js",
+        "build": "npm run clean && tsc -p .",
+        "watch": "tsc -w",
+        "clean": "rm -r bin && mkdir bin"
+    },
+    "devDependencies": {
+        "typescript": "~3.6.4"
+    }
+}
