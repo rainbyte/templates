@@ -1,0 +1,9 @@
+-main Main
+-cp src/
+-dce full
+
+--each
+-js bin/example.js
+
+--next
+-neko bin/example.n
