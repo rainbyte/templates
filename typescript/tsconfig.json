@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "bin",
+        "rootDir": "src",
+        "target": "es2019"
+    },
+    "include": [
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ]
+}
