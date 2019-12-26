@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>haskell-gui-webviewhs</title>
+    <script>
+        let count = 0;
+        const submit = window.external.invoke
+        function clickHandler() {
+            submit("click");
+        }
+        function increaseCount() {
+            countElem = document.getElementById("count");
+            if (countElem) {
+                countElem.innerText = ++count;
+            }
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            width: 100vw;  /* use viewport width  */
+            height: 100vh; /* use viewport height */
+            padding: 0;
+            margin: 0;
+            min-width: 600px;
+            min-height: 400px;
+            flex-direction: column;
+            justify-content: center; /* along main  axis */
+            align-items: center;     /* along cross axis */
+        }
+
+        body * {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <p>Number of clicks: <span id="count">0</span></p>
+    <input type="button" value="Print on console" onclick="clickHandler()">
+</body>
+</html>

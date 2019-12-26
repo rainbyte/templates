@@ -1,0 +1,25 @@
+name: haskell-gui-webviewhs
+version: 0.1.0.0
+synopsis: Haskell GUI example
+description: |
+  Haskell GUI example using webviewhs
+github: rainbyte/templates
+license: BSD3
+license-file: LICENSE
+author: Alvaro F. García
+maintainer: alvarofernandogarcia@gmail.com
+copyright: 2019 Alvaro F. García
+category: Web
+extra-source-files:
+  - README.md
+dependencies: # global
+  - base >= 4.7 && < 5
+executables:
+  haskell-gui-webviewhs:
+    main: Main.hs
+    source-dirs: src
+    dependencies:
+      - clock
+      - directory
+      - text
+      - webviewhs
