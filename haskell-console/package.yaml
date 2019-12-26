@@ -1,0 +1,21 @@
+name: haskell-console
+version: 0.1.0.0
+synopsis: Haskell console example
+description: |
+  Haskell console example
+github: rainbyte/templates
+license: BSD3
+license-file: LICENSE
+author: Alvaro F. García
+maintainer: alvarofernandogarcia@gmail.com
+copyright: 2019 Alvaro F. García
+category: Web
+extra-source-files:
+  - README.md
+dependencies: # global
+  - base >= 4.7 && < 5
+executables:
+  haskell-console:
+    main: Main.hs
+    source-dirs: src
+    dependencies: []
