@@ -1,0 +1,30 @@
+{
+    "name": "extension-example",
+    "displayName": "extension-example",
+    "description": "this extension is an example",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onCommand:extension.foo"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.foo",
+                "title": "foo"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run build",
+        "build": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.41.0",
+        "typescript": "^3.7.4"
+    }
+}
