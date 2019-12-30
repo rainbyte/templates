@@ -12,8 +12,12 @@ copyright: 2019 Alvaro F. García
 category: Web
 extra-source-files:
   - README.md
+default-extensions:
+  - NoImplicitPrelude
+  - OverloadedStrings
 dependencies: # global
   - base >= 4.7 && < 5
+  - protolude
 executables:
   haskell-console:
     main: Main.hs

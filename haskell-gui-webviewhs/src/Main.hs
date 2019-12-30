@@ -1,9 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 module Main where
 
-import           Control.Concurrent
-import           Control.Monad
+import           Protolude
 
 import qualified Data.Text as T
 
@@ -45,12 +42,12 @@ htmlGUI = void $ do
       , WHS.windowParamsResizable = True
       , WHS.windowParamsDebuggable = True
       }
-    windowPreLoop window = putStrLn "Opening GUI"
-    windowPosLoop window = putStrLn "Closing GUI"
+    windowPreLoop window = putText "Opening GUI"
+    windowPosLoop window = putText "Closing GUI"
     windowCallback window msg = case msg of
       "click" -> do
         WHS.runJavaScript' window "increaseCount();"
-        putStrLn "button clicked!"
+        putText "button clicked!"
       _       -> pure ()
 
 main :: IO ()
