@@ -12,7 +12,7 @@ import           System.Directory
 
 htmlGUI :: IO ()
 htmlGUI = void $ do
-  dir <- getCurrentDirectory
+  dir <- T.pack <$> getCurrentDirectory
   eitherWindow <- WHS.createWindow (windowParams dir) windowCallback
   case eitherWindow of
     Left  _      -> pure ()
@@ -36,17 +36,17 @@ htmlGUI = void $ do
         windowLoop window
     windowParams dir = WHS.WindowParams
       { WHS.windowParamsTitle = "haskell-gui-webviewhs"
-      , WHS.windowParamsUri = T.pack $ "file://" ++ dir ++ "/src/Main.html"
+      , WHS.windowParamsUri = "file://" <> dir <> "/src/Main.html"
       , WHS.windowParamsWidth = 600
       , WHS.windowParamsHeight = 400
       , WHS.windowParamsResizable = True
       , WHS.windowParamsDebuggable = True
       }
-    windowPreLoop window = putText "Opening GUI"
-    windowPosLoop window = putText "Closing GUI"
+    windowPreLoop _ = putText "Opening GUI"
+    windowPosLoop _ = putText "Closing GUI"
     windowCallback window msg = case msg of
       "click" -> do
-        WHS.runJavaScript' window "increaseCount();"
+        _ <- WHS.runJavaScript' window "increaseCount();"
         putText "button clicked!"
       _       -> pure ()
 
