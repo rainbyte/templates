@@ -1,0 +1,16 @@
+{
+    "name": "example-web-svelte",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.js --progress --profile --colors",
+        "watch": "webpack-dev-server"
+    },
+    "devDependencies": {
+        "svelte": "^3.16.5",
+        "svelte-loader": "^2.13.6",
+        "webpack": "^4.41.4",
+        "webpack-cli": "3.3.10",
+        "webpack-dev-server": "3.10.1"
+    }
+}
