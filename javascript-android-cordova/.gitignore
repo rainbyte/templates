@@ -1,0 +1,35 @@
+### Apache Cordova ###
+
+# Generated files and directories
+bin/*
+!/plugins
+!/plugins/android.json
+!/plugins/fetch.json
+plugins/*
+
+# Platform - Android
+platforms/android/.gradle
+platforms/android/app/src/main/assets/www
+platforms/android/build
+platforms/android/cordova
+platforms/android/local.properties
+platforms/android/platform_www/
+platforms/android/settings.gradle
+platforms/android/wrapper.gradle
+platforms/android/CordovaLib
+platforms/android/CordovaLib/build
+platforms/android/CordovaLib/gen
+platforms/android/CordovaLib/local.properties
+
+### Node ###
+
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+### System - Linux ###
+.directory
