@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/translations">
+        <file>hello-qt-qml_en.qm</file>
+        <file>hello-qt-qml_es.qm</file>
+    </qresource>
+</RCC> 
