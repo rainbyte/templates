@@ -1,0 +1,10 @@
+.google/
+.gradle/
+.idea/
+.settings/
+app/.cxx/
+app/build/
+.classpath
+.project
+build/
+local.properties
