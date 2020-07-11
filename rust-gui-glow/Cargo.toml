@@ -1,0 +1,24 @@
+[package]
+name = "rust-gui-glow"
+version = "0.1.0"
+authors = ["Alvaro Fernando García <alvarofernandogarcia@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+glow = { version = "0.5.0", default-features=false }
+
+[target.'cfg(not(any(target_arch = "wasm32")))'.dependencies]
+glutin = { version = "0.24", optional = true }
+sdl2 = { version = "0.33", optional = true }
+
+[features]
+default = ["desktop-glutin"]
+stdweb = ["std_web", "webgl_stdweb", "glow/stdweb"]
+desktop-sdl2 = ["sdl2", "glow/sdl2"]
+desktop-glutin = ["glutin", "glow/glutin"]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+std_web  = { version = "0.4", package = "stdweb", optional = true }
+webgl_stdweb = { version = "0.3", optional = true }
