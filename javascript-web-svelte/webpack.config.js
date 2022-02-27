@@ -32,6 +32,7 @@ module.exports = {
         chunkFilename: '[name].[id].js'
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist')
+        contentBase: path.join(__dirname, 'dist'),
+        port: 8080
     }
 }
