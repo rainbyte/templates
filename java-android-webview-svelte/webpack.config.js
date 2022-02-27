@@ -32,6 +32,9 @@ module.exports = {
         chunkFilename: '[name].[id].js'
     },
     devServer: {
-        contentBase: path.join(__dirname, 'app/src/main/assets')
+        static: {
+            directory: path.join(__dirname, 'app/src/main/assets'),
+        },
+        port: 8080
     }
 }
